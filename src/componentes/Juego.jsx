@@ -106,7 +106,9 @@ export const Juego = () => {
                 }
             </div>
             <div className="imagen">
-                {/* <img className="palo-img" src={`../src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />*/}
+                {/* <img className="palo-img" src={`../src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />
+                La imagen dinámica no se pudo hacer con esta línea porque en Netlify no se mostraban correctamente.
+                Hubo que importar todas las imágenes, guardarlas en el array imagenes y mostrarlas como se ve en la siguiente línea:*/}
                 <img className="palo-img" src={imagenes[imagen-1]} alt="El Ahorcado" />
             </div>
         </div>
