@@ -250,12 +250,12 @@ img {
 
 /* Juego */
 .pregunta {
-  margin:1.6rem 4rem;
-  font-size: 1.2rem;
+  margin:1rem 3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   border:1px solid rgb(239, 244, 89);
   border-radius: 5px;
-  color:rgb(239, 244, 89);
+  color:white;
   padding:5px;
   background-color: salmon;
 }
@@ -265,25 +265,27 @@ img {
   flex-direction:column;
   justify-content: space-evenly;
   align-items: center;
-  height: 55vh;
+  width:100vw;
+  height: 50vh;
 }
 
 .palabra {
   display:flex;
-  max-width:90vw;
+  justify-content: center;
+  width:90vw;
 }
 
 .imagen {
-  margin:10px 50px;
+  margin:5px 100px;
   width: 160px;
 }
 
 .palo {
-  width:35px;
-  height: 45px;
+  width:1rem;
+  height: 1.2rem;
   margin:5px;
   border-bottom: 3px solid orangered;
-  font-size:2.5rem;
+  font-size:1.2rem;
   font-weight: bold;
   text-align: center;
   color:red;
@@ -336,6 +338,12 @@ img {
     justify-content: space-evenly;
     align-items: flex-end;
     height: 55vh;
+  }
+
+  .palo {
+    width:2rem;
+    height: 2.2rem;
+    font-size:2.5rem;
   }
 }
 
