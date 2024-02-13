@@ -99,7 +99,7 @@ export const Juego = () => {
                 }
             </div>
             <div className="imagen">
-                <img className="palo-img" src={`../src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />
+                <img className="palo-img" src={`../assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />
             </div>
         </div>
         <div className="botones">
