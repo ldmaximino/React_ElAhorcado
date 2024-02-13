@@ -10,7 +10,7 @@ export const Portada = () => {
           <img src={caricatura01} alt="Caricatura" />
         </div>
         <p className="nombre-juego">"El Juego del Ahorcado"</p>
-        <button className="btn-jugar" onClick={() => navegacion("pregunta")}>Vamos a Jugar</button>
+        <button className="btn-jugar" onClick={() => navegacion("/pregunta")}>Vamos a Jugar</button>
     </div>
   )
 }
