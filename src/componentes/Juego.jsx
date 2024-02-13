@@ -10,6 +10,10 @@ import imgElAhorcado4 from '../assets/el_ahorcado4.png';
 import imgElAhorcado5 from '../assets/el_ahorcado5.png';
 import imgElAhorcado6 from '../assets/el_ahorcado6.png';
 const imagenes = [imgElAhorcado1,imgElAhorcado2,imgElAhorcado3,imgElAhorcado4,imgElAhorcado5,imgElAhorcado6];
+import aciertoAudio from '../assets/success.mp3';
+const aciertoSound = new Audio(aciertoAudio);
+import desAciertoAudio from '../assets/error.mp3';
+const desAciertoSound = new Audio(desAciertoAudio);
 
 export const Juego = () => {
   let cantEspacios = 0;
@@ -48,14 +52,17 @@ export const Juego = () => {
   }
   
   const pulsaTecla = (e) => {
+
     const letra = e.target.innerHTML;
     setMisLetras([...misLetras,letra]);
    
     if(palabra.indexOf(letra) >= 0) {
         setCorrectas([...correctas,letra]);
+        aciertoSound.play();
     }else {
         setInCorrectas([...inCorrectas,letra]);
         setImagen(imagen + 1);
+        desAciertoSound.play();
         if(imagen > 5) {
             setPalabraPista({
                 palabraIng: '',

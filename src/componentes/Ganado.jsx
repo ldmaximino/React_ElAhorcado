@@ -1,11 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import imgGanador from '../assets/ganador.png';
+import audioGanador from '../assets/ganador.mp3';
+const ganadorSound = new Audio(audioGanador);
+
+const soundGanador = () => {
+  ganadorSound.play();
+};
 
 export const Ganado = () => {
   const navegacion = useNavigate();
   return (
     <div className="ganador-container">
       <h1>Has ganado, Felicitaciones!!</h1>
+      {soundGanador()}
       <div className="ganador-img">
         <img src={imgGanador} alt="Caricatura de Ganador" />
       </div>

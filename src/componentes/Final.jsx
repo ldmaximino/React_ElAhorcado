@@ -2,6 +2,12 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contexto from '../contexto/Contexto';
 import imgPerdiste from '../assets/perdiste.jpeg';
+import audioPerdiste from '../assets/perdiste.mp3';
+const perdisteSound = new Audio(audioPerdiste);
+
+const soundPerdiste = () => {
+  perdisteSound.play();
+};
 
 export const Final = () => {
   const navegacion = useNavigate();
@@ -9,6 +15,7 @@ export const Final = () => {
   return (
     <div className="final-container">
       <h1>Has perdido, Inténtalo nuevamente!!</h1>
+      {soundPerdiste()}
       <div className="final-img">
         <img src={imgPerdiste} alt="Caricatura Perdiste" />
       </div>
