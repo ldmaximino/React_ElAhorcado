@@ -3,6 +3,13 @@ import { PALABROS } from '../assets/palabros';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contexto from '../contexto/Contexto';
+import imgElAhorcado1 from '../assets/el_ahorcado1.png';
+import imgElAhorcado2 from '../assets/el_ahorcado2.png';
+import imgElAhorcado3 from '../assets/el_ahorcado3.png';
+import imgElAhorcado4 from '../assets/el_ahorcado4.png';
+import imgElAhorcado5 from '../assets/el_ahorcado5.png';
+import imgElAhorcado6 from '../assets/el_ahorcado6.png';
+const imagenes = [imgElAhorcado1,imgElAhorcado2,imgElAhorcado3,imgElAhorcado4,imgElAhorcado5,imgElAhorcado6];
 
 export const Juego = () => {
   let cantEspacios = 0;
@@ -99,9 +106,8 @@ export const Juego = () => {
                 }
             </div>
             <div className="imagen">
-                {/* <img className="palo-img" src={`../src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />*/};
-                {/* <img className="palo-img" src={`/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />*/};
-                <img className="palo-img" src={`https://github.com/ldmaximino/React_ElAhorcado/tree/main/src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />
+                {/* <img className="palo-img" src={`../src/assets/el_ahorcado${imagen}.png`} alt="El Ahorcado" />*/}
+                <img className="palo-img" src={imagenes[imagen-1]} alt="El Ahorcado" />
             </div>
         </div>
         <div className="botones">
